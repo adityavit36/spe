@@ -1,8 +1,17 @@
 import React from 'react';
-import './styles.css';
+import './sty.css';
+import diagramImage from './assets/Blank Diagram_3.jpeg'; // Importing the image
+import ab from './assets/about.jpg';
+import choose from './assets/choose-us.jpg';
+import doctor1 from './assets/doctor-1.jpg';
+import doctor2 from './assets/doctor-2.jpg';
+import doctor3 from './assets/doctor-3.jpg';
+import logo from './assets/logo_full.png';
+import logo1 from './assets/logo_full_black.png';
 
-class output extends React.Component {
+class MyClass extends React.Component {
   render() {
+    
     return (
       <div>
         <meta charSet="UTF-8" />
@@ -10,12 +19,20 @@ class output extends React.Component {
         <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
-        <style dangerouslySetInnerHTML={{__html: "\n  .service__card {\n    background-color: #f0f0f0;\n    padding: 20px;\n    border-radius: 10px;\n    margin: 10px;\n    text-align: center;\n  }\n" }} />
+        <style dangerouslySetInnerHTML={{ __html: `
+          .service__card {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 10px;
+            text-align: center;
+          }
+        ` }} />
         <link rel="stylesheet" href="styles.css" />
-        <title>Web Design Mastery | Aarogyashala</title>
+        <title>Aarogyashala</title>
         <header>
           <nav className="section__container nav__container">
-            <div className="nav__logo">Aarogya<span>Shala</span></div>
+            <img src={logo} style={{width:"300px"}}/>
             <ul className="nav__links">
               <li className="link"><a href="#">Home</a></li>
               <li className="link"><a href="#">About Us</a></li>
@@ -28,11 +45,11 @@ class output extends React.Component {
           <div className="section__container header__container">
             <div className="header__content">
               <h1>Providing an Exceptional Patient Experience</h1>
-              <p style={{fontSize: '20px'}}>
+              <p style={{ fontSize: '20px' }}>
                 Experience the future of healthcare with Arogyashala, where quality
                 medical care meets the convenience of online consultations.
               </p>
-              <p style={{fontSize: '20px'}}>
+              <p style={{ fontSize: '20px' }}>
                 Say goodbye to long wait times and travel hassles – now, you can
                 connect with experienced doctors from the comfort of your own home.
                 With Arogyashala, access expert medical advice, diagnoses, and
@@ -52,10 +69,12 @@ class output extends React.Component {
             </div>
           </div>
         </header>
-        <h1 style={{paddingLeft: '25%'}}>Our Consultation Process</h1>
-        <section style={{paddingTop: '1.5rem', paddingBottom: '1rem', display: 'flex', justifyContent: 'center', alignItems: 'center', margin: 0}}>
-          <img src="assets/Blank Diagram_3.jpeg" style={{width: '50%', height: 'auto'}} />
+        <h1 style={{ paddingRight: '37%' }}>Our Consultation Process</h1>
+        <section style={{ paddingTop: '1.5rem', paddingBottom: '1rem', display: 'flex', justifyContent: 'center', alignItems: 'center', margin: 0 }}>
+        <img src={diagramImage} style={{ width: '50%', height: 'auto' }} alt="Diagram" />
         </section>
+
+
         <section className="section__container service__container">
           <div className="service__header">
             <div className="service__header__content">
@@ -100,23 +119,25 @@ class output extends React.Component {
             </div>
           </div>
         </section>
+
+
         <section className="section__container about__container">
           <div className="about__content">
             <h2 className="section__header">About Us</h2>
-            <p style={{fontSize: '18px'}}>
+            <p style={{ fontSize: '18px' }}>
               Welcome to AarogyaShala, your one-stop destination for
               reliable and comprehensive health care website. We are committed
               to promoting wellness and providing valuable resources to empower you
               on your health journey.
             </p>
-            <p style={{fontSize: '18px'}}>
+            <p style={{ fontSize: '18px' }}>
               Arogyashala Healthcare offers holistic, patient-centered care with a
               focus on preventive medicine and traditional healing practices. Its
               reputation for quality service, cultural sensitivity, and community
               engagement make it a compelling choice for those seeking comprehensive
               and personalized healthcare solutions
             </p>
-            <p style={{fontSize: '18px'}}>
+            <p style={{ fontSize: '18px' }}>
               Discover practical health tips and lifestyle advice to optimize your
               physical and mental well-being. We believe that small changes can lead
               to significant improvements in your quality of life, and we're here to
@@ -124,16 +145,16 @@ class output extends React.Component {
             </p>
           </div>
           <div className="about__image">
-            <img src="assets/about.jpg" alt="about" />
+            <img src={ab} alt="about" />
           </div>
         </section>
         <section className="section__container why__container">
           <div className="why__image">
-            <img src="assets/choose-us.jpg" alt="why choose us" />
+            <img src={choose} alt="why choose us" />
           </div>
           <div className="why__content">
             <h2 className="section__header">Why Choose Us</h2>
-            <p style={{fontSize: '18px'}}>
+            <p style={{ fontSize: '18px' }}>
               With a steadfast commitment to your well-being, our team of highly
               trained healthcare professionals ensures that you receive nothing
               short of exceptional patient experiences.
@@ -183,7 +204,7 @@ class output extends React.Component {
           <div className="doctors__grid">
             <div className="doctors__card">
               <div className="doctors__card__image">
-                <img src="assets/doctor-1.jpg" alt="doctor" />
+                <img src={doctor1} alt="doctor" />
                 <div className="doctors__socials">
                   <span><i className="ri-instagram-line" /></span>
                   <span><i className="ri-facebook-fill" /></span>
@@ -196,7 +217,7 @@ class output extends React.Component {
             </div>
             <div className="doctors__card">
               <div className="doctors__card__image">
-                <img src="assets/doctor-2.jpg" alt="doctor" />
+                <img src={doctor2} alt="doctor" />
                 <div className="doctors__socials">
                   <span><i className="ri-instagram-line" /></span>
                   <span><i className="ri-facebook-fill" /></span>
@@ -209,7 +230,7 @@ class output extends React.Component {
             </div>
             <div className="doctors__card">
               <div className="doctors__card__image">
-                <img src="assets/doctor-3.jpg" alt="doctor" />
+                <img src={doctor3} alt="doctor" />
                 <div className="doctors__socials">
                   <span><i className="ri-instagram-line" /></span>
                   <span><i className="ri-facebook-fill" /></span>
@@ -225,7 +246,7 @@ class output extends React.Component {
         <footer className="footer">
           <div className="section__container footer__container">
             <div className="footer__col">
-              <h3>Aarogya<span>Shala</span></h3>
+            <img src={logo1} style={{width:"300px", paddingBottom:"20px"}}/>
               <p>
                 We are honored to be a part of your healthcare journey and committed
                 to delivering compassionate, personalized, and top-notch care every
@@ -278,4 +299,4 @@ class output extends React.Component {
   }
 }
 
-export default output;
+export default MyClass;
